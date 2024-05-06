@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     
+    <center>
+        <h1>-------Student Report-------</h1>
+
+        <h2>Enter marks of PYTHON :</h2>
+        <input type="text" id="in1">
+
+        <h2>Enter marks of PHP :</h2>
+        <input type="text" id="in2">
+
+        <h2>Enter marks of DATA STRUCTURE :</h2>
+        <input type="text" id="in3">
+
+        <h2>Enter marks of ORGANISATION:</h2>
+        <input type="text" id="in4">
+
+        <h2>Enter marks of LEARNING :</h2>
+        <input type="text" id="in5">
+
+        <h2 id="ans"></h2>
+
+        
+    </center>
+
+</body>
+</html>
+
+<script>
+    let a = document.getElementById("in1").value
+    let b = document.getElementById("in2").value
+    let c = document.getElementById("in3").value
+    let d = document.getElementById("in4").value
+    let e = document.getElementById("in5").value
+
+    let total = (+a + +b + +c + +d + +e)*100/500
+
+    document.getElementById("ans").innerHTML = total
+</script>

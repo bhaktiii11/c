@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Operator-2</title>
+</head>
+<style>
+    h1{color: maroon;}
+</style>
+<body>
+    <center>
+        <h1>-----Student Report-----</h1> <br>
+
+        <h2>Enter marks of PYTHON :</h2>
+        <input type="text" id="in1">
+
+        <h2>Enter marks of PHP :</h2>
+        <input type="text" id="in2">
+
+        <h2>Enter marks of DATA STRUCTURE :</h2>
+        <input type="text" id="in3">
+
+        <!-- <h2>Enter marks of COMPUTER ORGANISATION :</h2>
+        <input type="text" id="in4">
+
+        <h2>Enter marks of MACHINE LEARNING :</h2>
+        <input type="text" id="in5"> -->
+
+        <h2 id="ans"></h2>
+    </center>    
+</body>
+</html>
+
+<script>
+    let python = document.getElementById("in1").value
+    let PHP = document.getElementById("in2").value
+    let STRUCTURE = document.getElementById("in3").value
+    // let COMPUTER = document.getElementById("in4").value
+    // let MACHINE = document.getElementById("in5").value
+
+    let total = (+python + +PHP + +STRUCTURE)*100/300
+
+    document.getElementById("ans").innerHTML = total
+
+</script>

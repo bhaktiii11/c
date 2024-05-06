@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{color: green;}
+</style>
+<body>
+    <center>
+        <h1>------SIMPLE INTEREST-------</h1> <br>
+
+        <h2>Enter Principle amount :</h2>
+        <input type="text" id="int1">
+
+        <h2>Enter rate of insterest amount :</h2>
+        <input type="text" id="int2">
+
+        <h2>Enter Time duration :</h2>
+        <input type="text" id="int3">
+
+        <h2 id="insterest"></h2>
+
+    </center>
+</body>
+</html>
+
+<script>
+    let amount = document.getElementById("int1").value
+    let rate = document.getElementById("int2").value
+    let duration = document.getElementById("int3").value
+
+    let insterest = +amount * +rate * +duration
+
+    document.getElementById("insterest").innerHTML = insterest
+
+</script>

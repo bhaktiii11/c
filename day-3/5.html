@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Operator-2</title>
+</head>
+<style>
+    h1{color: maroon;}
+</style>
+<body>
+    <center>
+        <h1 id="title">----Calculate GST----</h1>
+    
+    <h3>
+        Enter Price : 
+        <input type="text" id="int15">
+    </h3>
+    <h3>
+        Enter Rate : 
+        <input type="text" id="int16">
+    </h3>
+    <h1 id="ans4"></h1>
+
+</center>
+
+</body>
+</html>
+
+<script>
+    var price = document.getElementById("int15").value
+    var gst_rate = document.getElementById("int16").value
+
+    var ans4 = +price + (+price * (+gst_rate / 100))
+    document.getElementById("ans4").innerHTML = "GST is : "+ans4
+    </script>
