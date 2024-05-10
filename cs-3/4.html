@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <center>
+        <h1>---------- Age Calculation ----------</h1>
+    </center>
+    <h3>
+        Enter Your Age : 
+        <input type="text" id="int7">
+    </h3>
+    <h2 id="ans5"></h2>
+    <br><br>
+
+</body>
+</html>
+
+<script>
+
+let age = document.getElementById("int7").value
+
+if(age === "")
+{
+    document.getElementById("ans5").innerHTML = "Invalid Age"
+}
+else
+{
+    if(age>0 && age<=10)
+    {
+        document.getElementById("ans5").innerHTML = "Your'e Child..."
+    }
+    if(age>10 && age<=20)
+    {
+        document.getElementById("ans5").innerHTML = "Your'e Teen..."
+    }
+    if(age>20 && age<=30)
+    {
+        document.getElementById("ans5").innerHTML = "Your'e Adult..."
+    }
+}
+
+</script>
