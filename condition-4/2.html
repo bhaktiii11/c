@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <h1>-----Restaurant Bill-----</h1>
+
+        <select id="form" class="form-select" aria-label="Default select example">
+            <option id="opt1" selected>Open this select menu</option>
+            <option id="m1" value="1">pizza</option>
+            <option id="m2" value="2">cold-drinks</option>
+            <option id="m3" value="3">burger</option>
+        </select>
+
+        <h3 id="ans2"></h3>
+    </center>
+
+</body>
+</html>
+
+<script>
+    let form = document.getElementById("form").value
+    let m1 = document.getElementById("m1").value
+    let m2 = document.getElementById("m2").value
+    let m3 = document.getElementById("m3").value
+
+    price1 = 200
+    price2 = 100
+    price3 = 300
+    if (form === "") {
+        document.getElementById("ans2").innerText="Select Menu"    
+    }
+    else{
+        if (form == m1) {
+            document.getElementById("ans2").innerText="Your Bill Is..."+(price1+((5/100)*price1)) +" ₹"
+        }
+        else if (form == m2) {
+            document.getElementById("ans2").innerText="Your Bill Is..."+(price2+((5/100)*price2)) +" ₹"
+        }
+        else{
+            document.getElementById("ans2").innerText="Your Bill Is..."+(price3+((5/100)*price3)) +" ₹"
+        }
+    }
+</script>
