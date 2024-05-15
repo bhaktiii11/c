@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>day of the week :</h1>
+        <h3>Enter day</h3>
+        <input type="text" id="day">
+
+        <h1 id="ans"></h1>
+    </center>
+</body>
+</html>
+<script>
+    let a = document.getElementById("day").value
+
+    if(a === ""){
+        document.getElementById("ans").innerHTML = ""
+    } else{
+        switch(a){
+
+    case "Monday" : document.getElementById("ans").innerHTML = "It's the start of the workweek ⏳."
+    break
+
+    case "Tuesday" : document.getElementById("ans").innerHTML = "It's second day of the week🤧."
+    break
+
+    case "Wedneday" : document.getElementById("ans").innerHTML = "It's middle day of the week👌."
+    break
+
+    case "Thursday" : document.getElementById("ans").innerHTML = "Thursday is how Friday says, hang on, you are almost there🔔."
+    break
+
+    case "Friday" : document.getElementById("ans").innerHTML = "May this Good Friday be a reminder that the lord hears our prayers✨✝️."
+    break
+
+    case "Saturday" : document.getElementById("ans").innerHTML = "It's hard to nap on saturday or the weekends💃."
+    break
+
+    case "sunday" : document.getElementById("ans").innerHTML = "Enjoy A Peaceful sunday🎉."
+    break
+
+    default : document.getElementById("ans").innerHTML = "Invalid Number"
+        }
+    }
+</script>
