@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>-----exponent and base-----</h1>
+     <h3>Enter Base :</h3>
+     <input type="text" id="in4">
+
+     <h3>Enter Exponent :</h3>
+     <input type="text" id="in5">
+
+     <h2 id="ans4"></h2>
+</body>
+</html>
+<script>
+    let num4 = document.getElementById("in4").value
+    let num5 = document.getElementById("in5").value
+
+    let i4 = 1
+    let res = 1
+
+    if(num4 === "" && num5 === ""){
+        let num5 = document.getElementById("ans4").innerHTML="INVALID"
+    }
+    else{
+        do{
+            res *= num4
+            i4++
+        }while(i4 <= num5)
+
+        document.getElementById("ans4").innerHTML=res
+    }   
+
+</script>

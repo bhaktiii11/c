@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <center>
+    <h1>-----Count of odd numbers----- </h1>
+   </center>
+    <h3>
+        Enter Starting Point :
+        <input type="number" id="int8">
+    </h3>
+    <h3>
+        Enter Ending Point :
+        <input type="number" id="int9">
+    </h3>
+    <h2 id="ans6"></h2>
+    <h2 id="odd"></h2>
+    <br><br><br>
+   
+</body>
+</html>
+
+<script>
+    let start2 = document.getElementById("int8").value 
+    let end2 = document.getElementById("int9").value
+    let count2 = 0
+    let i6 = start2
+    
+    if(start2 === "" && end2 === "")
+    {
+        document.getElementById("ans6").innerHTML = "Invalid Number"
+    }
+    else
+    {
+        do
+        {
+            if(i6 % 2 != 0)
+            {
+                count2++
+                document.getElementById("odd").innerHTML += i6+"&nbsp;&nbsp;&nbsp;&nbsp;"
+            }
+            i6++
+        }while(i6 <= end2)
+        document.getElementById("ans6").innerHTML = "Odd Number Between"+start2+"to"+end2+"is :"+count2
+    }
+    
+    </script>

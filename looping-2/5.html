@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>-----Count of even numbers-----</h1>
+    </center>
+    <h3>
+        Enter Starting Point :
+        <input type="number" id="int6">
+    </h3>
+    <h3>
+        Enter Ending Point :
+        <input type="number" id="int7">
+    </h3>
+    <h2 id="ans5"></h2>
+    <h2 id="even"></h2>
+    <br><br><br>
+</body>
+</html>
+<script>
+    let start1 = document.getElementById("int6").value 
+    let end1 = document.getElementById("int7").value
+    let count1 = 0
+    let i5 = start1
+    
+    if(start1 === "" && end1 === "")
+    {
+        document.getElementById("ans5").innerHTML = "Invalid Number"
+    }
+    else
+    {
+        do
+        {
+            if(i5 % 2 == 0)
+            {
+                count1++
+                document.getElementById("even").innerHTML += i5+"&nbsp;&nbsp;&nbsp;&nbsp;"
+            }
+            i5++
+        }while(i5 <= end1)
+        document.getElementById("ans5").innerHTML = "Even Number Between"+start1+"to"+end1+"is :"+count1
+    }
+    
+    </script>
