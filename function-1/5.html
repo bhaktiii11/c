@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .flex{
+        display: flex;
+    }
+</style>
+<body>
+    <!-- Question-5 -->
+    <center>
+        <h1>--------------- Reverse The Digit ---------------</h1>
+    </center>
+    <h3>
+        Enter Any Number : 
+        <input type="text" id="int7">
+    </h3>
+    <div class="flex">
+        <h2 id="msg1"></h2>
+        <h2 id="ans5"></h2>
+    </div>
+    <br><hr><br>
+</body>
+</html> 
+<script>
+    let rev_num = document.getElementById("int7").value
+
+reverse=()=>
+{
+    if(rev_num === "")
+    {
+        document.getElementById("ans5").innerHTML = "Invalid Number"
+    }
+    else
+    {
+        document.getElementById("msg1").innerHTML = "Reverse Of Digit is : &nbsp;"
+        for(let i=rev_num.length-1; i>=0; i--)
+        {
+            document.getElementById("ans5").innerHTML += rev_num[i]
+        }  
+    }
+}
+reverse()
+</script>

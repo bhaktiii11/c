@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Product of Digits</h2>
+        <input type="number" id="numberInput" placeholder="Enter a number" />
+        <p id="result"></p>
+
+    </div>
+</body>
+</html>
+<script>
+    var Product=document.getElementById("numberInput").value 
+    var digits = 1
+    const calculateproduct = function() {
+        for ( var i = 0 ; Product[i]; i++){
+            digits *= Product[i]
+        }
+        document.getElementById("result").innerHTML = "Ans:" + digits 
+        }
+        calculateproduct()
+</script>

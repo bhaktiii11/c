@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>--------------- Odd Number ---------------</h1>
+    </center>
+    <h3>
+        Enter Starting Point : 
+        <input type="text" id="int8">
+    </h3>
+    <h3>
+        Enter Ending Point : 
+        <input type="text" id="int9">
+    </h3>
+    <div class="flex">
+        <h2 id="msg2"></h2>
+        <h2 id="ans6"></h2>
+    </div>
+    <br><hr><br>
+</body>
+</html>
+<script>
+let start_num = document.getElementById("int8").value
+let end_num = document.getElementById("int9").value
+
+let odd = function()
+{
+    if(start_num === "" && end_num === "")
+    {
+        document.getElementById("ans6").innerHTML = "Invalid Number"
+    }
+    else
+    {
+        document.getElementById("msg2").innerHTML = "Odd Number is : &nbsp;"
+        for(let i=start_num; i<=end_num; i++)
+        {
+            if(i%2 !== 0)
+            {
+                document.getElementById("ans6").innerHTML += i+"&nbsp;&nbsp;&nbsp;"
+            }
+        }  
+    }
+}
+odd()
+
+</script>

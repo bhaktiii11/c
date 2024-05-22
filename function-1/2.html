@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>------sum of three number------</h1>
+
+    <h3>Enter First Number :</h3>
+    <input type="text" id="in2">
+
+    <h3>Enter Second Number :</h3>
+    <input type="text" id="in3">
+
+    <h3>Enter Third Number :</h3>
+    <input type="text" id="in4">
+
+    <h2 id="ans2"></h2>
+
+
+</body>
+</html>
+
+<script>
+    let first = document.getElementById("in2").value 
+    let second  = document.getElementById("in3").value 
+    let third = document.getElementById("in4").value
+    
+    function sum2(){
+        if (first === "" && second === "" && third === ""){
+            document.getElementById("ans2").innerHTML="Invalid"
+        }
+        else{
+            let total = +first + +second + +third
+            document.getElementById("ans2").innerHTML=total
+        }
+    }
+
+    sum2()
+
+</script>

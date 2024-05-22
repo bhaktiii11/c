@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>--------------- Your Screen Mode ---------------</h1>
+    </center>
+    <label style="font-size: 20px; font-weight: bolder;">
+        Select Your Mode : 
+    </label>
+    <select name="" id="int10">
+        <option value="">Select Any Option</option>
+        <option value="Dark">Dark</option>
+        <option value="Light">Light</option>
+    </select>
+    <h2 id="ans7"></h2>
+    <br><br><br>
+
+
+</body>
+</html>
+<script>
+    let mode_val = document.getElementById("int10").value
+
+mode=()=>
+{
+    if(mode_val === "")
+    {
+        document.getElementById("ans7").innerHTML = "Invalid Number"
+    }
+    else
+    {
+        if(mode_val === "true")
+        {
+            document.getElementById("ans7").innerHTML = "DarkMode is On"
+        }
+        else
+        {
+            document.getElementById("ans7").innerHTML = "DarkMode is Off"
+        }
+    }
+}
+mode()
+</script>
