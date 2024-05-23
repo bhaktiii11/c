@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>-----Area of Rectangle-----</h1>
+    </center>
+    <h3>
+        Enter length:
+        <input type="number" id="int3">
+    </h3>
+    <h3>
+        Enter width:
+        <input type="number" id="int4">
+    </h3>
+    <h2 id="ans2"></h2>
+    <br><hr><br>
+</body>
+</html>
+<script>
+    let length =document.getElementById("int3").value 
+    let width =document.getElementById("int4").value 
+
+    rectangle=(length,width)=>
+    {
+        let rec_area = +length * +width
+        return rec_area
+    }
+    document.getElementById("ans2").innerHTML = "Area of Rectangle is : "+rectangle(length,width)
+
+</script>

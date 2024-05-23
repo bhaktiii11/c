@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>-----Concate of string-----</h1>
+    </center>
+    <h3>
+        Enter First String :
+        <input type="text" id="int5">
+    </h3>
+    <h3>
+        Enter second String :
+        <input type="text" id="int6">
+    </h3>
+    <h2 id="ans3"></h2>
+    <br><hr><br>
+</body>
+</html>
+<script>
+    let first_str = document.getElementById("int5").value 
+    let sec_str = document.getElementById("int6").value 
+
+    if(first_str === "" && sec_str === "")
+    {
+        document.getElementById("ans3").innerHTML = "Invalid string"
+    }
+    else
+    {
+        concate=(first_str, sec_str)=>
+        {
+            let merge_str = first_str + "&nbsp;&nbsp;" + sec_str
+            return merge_str
+        }
+        document.getElementById("ans3").innerHTML = "concatenate of string is :"+concate(first_str,sec_str)
+    }
+
+</script>

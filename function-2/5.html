@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>-----Length of string-----</h1>
+    </center>
+    <h3>
+        Enter Any String :
+        <input type="text" id="int8">
+    </h3>
+    <h2 id="ans5"></h2>
+    <br><hr><br>
+</body>
+</html>
+<script>
+    let str = document.getElementById("int8").value 
+
+    if(str === "")
+    {
+        document.getElementById("ans5").innerHTML  = "Invalid Side"
+        
+    }
+    else
+    {
+        length_str=(str)=>
+        {
+            return str.length
+        }
+        document.getElementById("ans5").innerHTML = "Length of string is :"+length_str(str)
+    }
+</script>

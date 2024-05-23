@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>-----Area of square-----</h1>
+    </center>
+    <h3>
+        Enter The side of square :
+        <input type="number" id="int7">
+    </h3>
+    <h2 id="ans4"></h2>
+    <br><hr><br>
+</body>
+</html>
+<script>
+    let side = document.getElementById("int7").value 
+     
+     if(side === "")
+     {
+        document.getElementById("ans4").innerHTML = "Invalid Side"
+     }
+     else
+     {
+        square=(side)=>
+        {
+            let area_square = +side * +side
+            return area_square
+        }
+        document.getElementById("ans4").innerHTML = "Area of Square is :"+square(side)
+     }
+</script>

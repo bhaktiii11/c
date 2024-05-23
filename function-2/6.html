@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>--------------- Start And End String With "A" ---------------</h1>
+    </center>
+    <h3>
+        Enter Any String : 
+        <input type="text" id="int9">
+    </h3>
+    <h2 id="ans6"></h2>
+</body>
+</html>
+<script>
+    let str_a = document.getElementById("int9").value
+
+if(str_a === "")
+{
+    document.getElementById("ans6").innerHTML = "Invalid String"
+}
+else
+{
+    start_end=(str_a)=>
+    {
+        if(str_a[0] === "A" && str_a[str_a.length-1] === "A")
+        {
+            return "Our String Will End With 'A' and Also Our String is End With 'A'"
+        }
+        else if(str_a[0] === "a" && str_a[str_a.length-1] === "A")
+        {
+            return "Our String Will End With 'A' and Also Our String is End With 'A'"
+        }
+        else if(str_a[0] === "A" && str_a[str_a.length-1] === "a")
+        {
+            return "Our String Will End With 'A' and Also Our String is End With 'A'"
+        }
+        else if(str_a[0] === "a" && str_a[str_a.length-1] === "a")
+        {
+            return "Our String Will End With 'A' and Also Our String is End With 'A'"
+        }
+        else if(str_a[0] === "A" || str_a[0] === "a")
+        {
+            return "Our String is Start From 'A'"
+        }
+        else if(str_a[str_a.length-1] === "A" || str_a[str_a.length-1] === "a")
+        {
+            return "Our String is End With 'A'"
+        }
+        else
+        {
+            return "Our String is Not Start From 'A' And Not End With 'A'"
+        }
+
+    } 
+    document.getElementById("ans6").innerHTML = start_end(str_a)
+}
+</script>
