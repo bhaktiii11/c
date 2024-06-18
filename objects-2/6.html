@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>------- Add 20 to each students marks -------</h1>
+    </center>
+</body>
+</html>
+<script>
+    let Students = [
+        {name : "Komal" , roll : 1 , mark : 25},
+        {name : "Mansi" , roll : 7 , mark : 55},
+        {name : "Bhakti" , roll : 5 , mark : 75},
+        {name : "Aastha" , roll : 8 , mark : 5},
+        {name : "Harmi" , roll : 3 , mark : 55},
+    ]
+
+    let add = Students.map((el_4)=>
+    {
+        return el_4.mark + 20
+    })
+    console.log(add)
+    document.getElementById("add").innerHTML += add
+
+
+
+</script>

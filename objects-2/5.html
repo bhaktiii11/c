@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h2>------- only name of students who scored more than 60 -------</h2>
+    </center>
+</body>
+</html>
+<script>
+    let Students = [
+        {name : "Komal" , roll : 1 , mark : 25},
+        {name : "Mansi" , roll : 7 , mark : 55},
+        {name : "Bhakti" , roll : 5 , mark : 75},
+        {name : "Aastha" , roll : 8 , mark : 5},
+        {name : "Harmi" , roll : 3 , mark : 55},
+    ]
+
+    let name_mark = Students.filter((el_3)=>
+    {
+        return el_3.mark > 60;
+    }).map((el_3)=>
+    {
+        return el_3.name
+    })
+    console.log(name_mark)
+    // document.getElementById("name_mark").innerHTML += name_mark
+
+</script>

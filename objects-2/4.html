@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>------- Sum of marks of all students -------</h1>
+    </center>
+</body>
+</html>
+<script>
+    let students = [
+        {name : "Komal" , roll : 1 , mark : 25},
+        {name : "Mansi" , roll : 7 , mark : 55},
+        {name : "Bhakti" , roll : 5 , mark : 75},
+        {name : "Aastha" , roll : 8 , mark : 5},
+        {name : "Harmi" , roll : 3 , mark : 55},
+    ]
+
+    let ans = students.reduce((acc , curr)=>{
+        return acc + curr.mark
+    },0)
+
+    console.log(ans)
+</script>
