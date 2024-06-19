@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>------- Que 1 -------</h1>
+    </center>
+    <h1 id="ans"></h1>
+</body>
+</html>
+<script>
+    let students = [
+        {name : "Komal" , roll : 1 , mark : 45},
+        {name : "Mansi" , roll : 7 , mark : 35},
+        {name : "Bhakti" , roll : 5 , mark : 95},
+        {name : "Aastha" , roll : 8 , mark : 15},
+        {name : "Harmi" , roll : 3 , mark : 20},
+    ]
+
+    let ans = students.filter((el)=>{
+        return el.mark > 90
+    }).map((el)=>{
+        return el.name
+    })
+    console.log(ans)
+    
+</script>
