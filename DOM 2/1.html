@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO Form</title>
+    <link rel="stylesheet" href="day27.css" />
+  </head>
+  <body>
+    <!-- Dont make any changes here -->
+    <h1>TODO App</h1>
+    <div>
+      <!-- ** We are using form here  ***  -->
+      <form id="todo_Form">
+        <label for="">Task Name</label><br />
+        <input id="task" type="text" placeholder="Enter Task Name" /><br />
+        <label for="">Priority </label><br />
+        <select id="priority">
+          <option value="">Select Priority</option>
+          <option value="High">High</option>
+          <option value="Low">Low</option>
+        ><br />
+        <input type="submit" />
+      </form>
+      <table>
+        <!-- Dont change order of columns -->
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Priority</th>
+            <th>Favourite</th>
+          </tr>
+        </thead>
+        <tbody>
+        <!-- Append your output to tbody -->
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",todo_fun)
+
+function todo_fun(event)
+{
+    event.preventDefault()
+    let task = document.getElementById("task").value
+    let priority = document.getElementById("priority").value
+
+    let tr = document.createElement("tr")
+
+    let td_1 = document.createElement("td")
+    td_1.innerHTML = task
+
+    let td_2 = document.createElement("td")
+    td_2.innerHTML = priority
+    if(priority === "High")
+    {
+        td_2.style.backgroundColor = '#3ABEF9'
+        // td_2.style.color = 'white'
+    }
+    else
+    {
+        td_2.style.backgroundColor = '#050C9C'
+        td_2.style.color = 'white'
+    }
+
+    let td_3 = document.createElement("td")
+    td_3.innerHTML = "Delete"
+    td_3.addEventListener("click", function() {
+        tr.remove();
+    })
+
+    tr.append(td_1, td_2, td_3)
+
+    document.querySelector("tbody").append(tr)
+
+    document.getElementById('todo_Form').reset();
+}
+</script>
