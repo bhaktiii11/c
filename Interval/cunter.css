@@ -1,0 +1,22 @@
+.container{
+    height: 150px;
+    width: 70%;
+    border: 1px solid;
+    /* margin-left: 350px; */
+    margin-top: 50px;
+    display: flex;
+
+    background-color: rgb(36, 36, 72);
+}
+.icon{
+    height: 100%;
+    width: 20%;    
+    border: 2px solid white;
+    i{
+        color: white;
+        font-size: 20px;
+    }
+    h2{
+        color: white;
+    }
+}
