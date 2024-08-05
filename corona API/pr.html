@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>corona-data</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    body{
+        color: rgb(180, 71, 35);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #section{
+        height: 100vh;
+        background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3),rgba(0,0,0,0.3)) , url(img/coronavirus-covid19-infection-3d-medical-600nw-1676169577.webp);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        
+    }
+
+    h2{
+        font-size: 30px;
+        margin-left: 700px;
+        margin-top: 100px;
+    }
+    input{
+        padding-left: 15px;
+        margin-left: 700px;
+    }
+    button{
+        height: 30px;
+        width: 100px;
+        border-radius: 8px;
+        border: transparent;
+        font-size: 15px;
+    }
+</style>
+<body>
+
+    <div id="section">
+            <center>
+                <br>
+                <h2>Enter Any City :- </h2>
+                <br>
+                <input type="text" id="nation">
+                <button id="submit">Submit</button>
+                <br>
+                <div id="data"></div>
+        </center>
+    </div>
+</body>
+</html>
+
+<script src="pr.js"></script>
