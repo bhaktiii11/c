@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background: url(img/slider1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% ;
+    margin-top: 200px;
+    
+}
+.container {
+    width: 50%;
+    margin: 0 auto;
+    
+    
+}
+
+form {
+    margin-bottom: 20px;
+
+}
+
+input, select, button {
+    margin: 5px;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    
+}
+
+li {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #151202;
+    
+}
+
+button {
+    cursor: pointer;
+    
+}
+
+</style>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+        <form id="task-form">
+            <input type="text" id="task-name" placeholder="Task Name" required>
+            <input type="text" id="task-desc" placeholder="Task Description">
+            <input type="date" id="task-due-date">
+            <select id="task-priority">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <button type="submit">Add Task</button>
+        </form>
+        <div class="filter">
+            <label for="filter-priority">Filter by priority:</label>
+            <select id="filter-priority">
+                <option value="All">All</option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+        </div>
+        <ul id="task-list"></ul>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const taskForm = document.getElementById('task-form');
+    const taskList = document.getElementById('task-list');
+    const filterPriority = document.getElementById('filter-priority');
+
+    taskForm.addEventListener('submit', addTask);
+    taskList.addEventListener('click', modifyTask);
+    filterPriority.addEventListener('change', filterTasks);
+
+    let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+    function addTask(e) {
+        e.preventDefault();
+        const name = document.getElementById('task-name').value;
+        const desc = document.getElementById('task-desc').value;
+        const dueDate = document.getElementById('task-due-date').value;
+        const priority = document.getElementById('task-priority').value;
+
+        const task = { name, desc, dueDate, priority };
+        tasks.push(task);
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+        displayTasks(tasks);
+        taskForm.reset();
+    }
+
+    function modifyTask(e) {
+        if (e.target.tagName === 'BUTTON') {
+            const action = e.target.dataset.action;
+            const index = e.target.dataset.index;
+            if (action === 'edit') {
+                editTask(index);
+            } else if (action === 'delete') {
+                deleteTask(index);
+            }
+        }
+    }
+
+    function editTask(index) {
+        const task = tasks[index];
+        document.getElementById('task-name').value = task.name;
+        document.getElementById('task-desc').value = task.desc;
+        document.getElementById('task-due-date').value = task.dueDate;
+        document.getElementById('task-priority').value = task.priority;
+        tasks.splice(index, 1);
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+        displayTasks(tasks);
+    }
+
+    function deleteTask(index) {
+        tasks.splice(index, 1);
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+        displayTasks(tasks);
+    }
+
+    function filterTasks() {
+        const priority = filterPriority.value;
+        const filteredTasks = tasks.filter(task => priority === 'All' || task.priority === priority);
+        displayTasks(filteredTasks);
+    }
+
+    function displayTasks(tasks) {
+        taskList.innerHTML = '';
+        tasks.forEach((task, index) => {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <strong>${task.name}</strong> - ${task.desc} (Due: ${task.dueDate}) [${task.priority}]
+                <button data-action="edit" data-index="${index}">Edit</button>
+                <button data-action="delete" data-index="${index}">Delete</button>
+            `;
+            taskList.appendChild(li);
+        });
+    }
+
+    displayTasks(tasks);
+});
+
+</script>
