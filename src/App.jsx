@@ -1,16 +1,8 @@
 import React from 'react'
-import Nav from './pr-component/Nav'
-import Section from './pr-component/Section'
-import Footer from './pr-component/Footer'
-import Section2 from './pr-component/Section2'
+import UseStateExp1 from './usestate-hook/UseStateExp1'
 
-export default function App() {
+export default function () {
   return (
-    <div>
-      <Nav/>
-      <Section/>
-      <Section2/>
-      <Footer/>
-    </div>
+    <UseStateExp1/>
   )
 }
