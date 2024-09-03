@@ -1,8 +1,10 @@
 import React from 'react'
-import UseStateExp1 from './usestate-hook/UseStateExp1'
+import UseEffectExp1 from './useEffect/UseEffectExp1'
 
-export default function () {
+export default function App() {
   return (
-    <UseStateExp1/>
+    <div>
+      <UseEffectExp1/>
+    </div>
   )
 }
