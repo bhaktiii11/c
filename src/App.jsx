@@ -1,10 +1,8 @@
 import React from 'react'
-import UseEffectExp1 from './useEffect/UseEffectExp1'
+import Counter from './Count/counter'
 
 export default function App() {
   return (
-    <div>
-      <UseEffectExp1/>
-    </div>
+    <Counter/>
   )
 }
