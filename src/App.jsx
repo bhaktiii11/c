@@ -1,8 +1,10 @@
 import React from 'react'
-import Counter from './Count/counter'
+import Event from './Event/Event'
 
 export default function App() {
   return (
-    <Counter/>
+    <div>
+      <Event/>
+    </div>
   )
 }

@@ -1,14 +1,21 @@
-/* body{
+body{
   margin: 0;
   text-align: center;
   display: flex;
+  /* flex-direction: column; */
   justify-content: center;
   place-items: center;
-  min-height: 100vh;
-  min-width: 320px;
+  min-height: 90vh;
+  min-width: 100px;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  background: url('https://marketplace.canva.com/EAE6S6-pyBs/1/0/1600w/canva-pink-aesthetic-zoom-virtual-background-t5QXEzHaSdM.jpg');
+  background-size: cover;
 
 }
 .div{
+  border: 1px solid;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,93 +26,4 @@
   display: flex;
   justify-content: space-between;
   gap: 20px;
-}
-body{
-  height: 100vh;
-  background: url('https://img.pikbest.com/wp/202344/antique-paper-texture-photo-download-vintage-background-with-an_9917195.jpg!sw800');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.div h1{
-  font-size: 50px;
-}
-.div h2{
-  font-size: 50px;
-}
-.div1 button{
-  height: 45px;
-  width: 120px;
-  font-size: 17px;
-} */
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f0f0f0;
-  margin: 0;
-  background: url('https://slidescorner.com/wp-content/uploads/2024/02/Aesthetic-Pastel-Cute-PowerPoint-Background-with-Rainbow-and-Clouds-by-SlidesCorner.com_.jpg');
-  background-size: cover;
-  
-}
-
-.counter-app {
-  text-align: center;
-  background-color: #fff;
-  padding: 50px;
-  /* border: 1px solid; */
-  border-radius: 10px;
-  width:300px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.counter-app h1 {
-  margin-bottom: 80px;
-  font-size: 54px;
-  color: #E49D7E;
-}
-
-.counter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.counter button {
-  width: 60px;
-  height: 60px;
-  background-color: #B4EBE5;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 24px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.counter .count {
-  width: 60px;
-  height: 60px;
-  background-color: #FFACA6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  color: #333;
-  border-radius: 5px;
-}
-
-.reset-btn {
-  background-color: #B4EBE5;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  height: 60px;
-  width: 60px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
