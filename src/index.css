@@ -5,17 +5,12 @@ body{
   /* flex-direction: column; */
   justify-content: center;
   place-items: center;
-  min-height: 90vh;
-  min-width: 100px;
-  align-items: center;
-  height: 100vh;
-  background-color: #f0f0f0;
-  background: url('https://marketplace.canva.com/EAE6S6-pyBs/1/0/1600w/canva-pink-aesthetic-zoom-virtual-background-t5QXEzHaSdM.jpg');
-  background-size: cover;
+  min-height: 100vh;
+  min-width: 320px;
 
 }
 .div{
-  border: 1px solid;
+  /* border: 1px solid; */
   display: flex;
   flex-direction: column;
   justify-content: center;
