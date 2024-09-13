@@ -1,10 +1,12 @@
 import React from 'react'
-import Form from './Components/Form'
+import ControlledCom from './Controlled/ControlledCom'
+import UncontrolledCom from './Controlled/UncontrolledCom'
 
 export default function App() {
   return (
-    <div>
-      <Form/>
+    <div> 
+      <ControlledCom/>
+      <UncontrolledCom/>
     </div>
   )
 }
