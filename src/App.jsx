@@ -1,10 +1,10 @@
 import React from 'react'
-import FomeValid from './Form/FomeValid'
+import Form from './Components/Form'
 
 export default function App() {
   return (
     <div>
-      <FomeValid/>
+      <Form/>
     </div>
   )
 }
