@@ -1,10 +1,10 @@
 import React from 'react'
-import Form from './Components/Form'
+import ReactBootstrap from './ReactBootstrap/ReactBootstrap'
 
 export default function App() {
   return (
     <div>
-      <Form/>
+      <ReactBootstrap/>
     </div>
   )
 }
