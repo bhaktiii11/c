@@ -1,10 +1,10 @@
 import React from 'react'
-import ReactBootstrap from './ReactBootstrap/ReactBootstrap'
+import Web from './Components/Web'
 
 export default function App() {
   return (
     <div>
-      <ReactBootstrap/>
+      <Web/>
     </div>
   )
 }
