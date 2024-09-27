@@ -1,10 +1,10 @@
 import React from 'react'
-import LocalExp from './LocalStorage/LocalExp'
+import Crud from './CRUD/Crud'
 
 export default function App() {
   return (
     <div>
-      <LocalExp/>
+      <Crud/>
     </div>
   )
 }
