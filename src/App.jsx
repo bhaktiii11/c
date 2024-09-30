@@ -1,10 +1,10 @@
 import React from 'react'
-import Crud from './CRUD/Crud'
+import Crud2 from './Crud2/Crud2'
 
 export default function App() {
   return (
     <div>
-      <Crud/>
+        <Crud2/>
     </div>
   )
 }
