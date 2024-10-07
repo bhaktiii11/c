@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    text-align: center;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    place-items: center;
+    min-height: 100vh;
+    min-width: 320px;
+    background: url(https://html.sammy-codes.com/images/background.jpg);
+  background-size: cover;
+  background-position: center;
+  
+  }
+  .div{
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .div1{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  tr,td{
+    padding: 20px;
+  }

@@ -8,7 +8,7 @@ export default function Home({data}) {
         <Link to={"/create"} >create</Link><br /><br />
         <Link to={"/delete"} >Delete</Link><br /><br />
         <Link to={"/update"} >update</Link><br /><br />
-        <table border="1" width="50%">
+        <table border="1" width="80%">
             <thead>
                 <tr>
                     <th>id</th>

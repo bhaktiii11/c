@@ -11,8 +11,8 @@ import { useState } from 'react';
 export default function App() {
   const [data, setData] = useState(
     [
-      { id: 1, name: "sumit", subject: "react"},
-      { id: 2, name: "rahul", subject: "nodejs"},
+      { id: 1, name: "bhakti", subject: "react"},
+      { id: 2, name: "KMB", subject: "nodejs"},
     ]
   )
   return (
@@ -22,7 +22,7 @@ export default function App() {
         <Route path='/' element={<Home data={data}/>}></Route>
         <Route path='/create' element={<Create data={data} setData={setData}/>}></Route>
         <Route path='/delete' element={<Delete data={data} setData={setData}/>}></Route>
-        <Route path='/update' element={<Update/>}></Route>
+        <Route path='/update' element={<Update data={data} setData={setData}/>}></Route>
         </Routes>
         </BrowserRouter>
       </div>

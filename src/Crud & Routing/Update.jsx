@@ -44,7 +44,7 @@ export default function Update({ data, setData }) {
       <button onClick={handleUpdate}>Update Data</button>
 
       <br /><br />
-      <table border="1" width="500px">
+      <table border="1" width="800px">
         <thead>
           <tr>
             <th>ID</th>
