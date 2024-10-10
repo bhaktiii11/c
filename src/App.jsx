@@ -1,30 +1,30 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './Crud & Routing/Home';
-import Create from './Crud & Routing/Create';
-import Delete from './Crud & Routing/Delete';
-import Update from './Crud & Routing/Update';
-import { useState } from 'react';
-
-
+import React from 'react'
+import {BrowserRouter , Routes , Route} from 'react-router-dom'
+import Home from './Filter/Home'
+import Food from './Filter/Food'
+import Electronic from './Filter/Electronic'
+import Beuty from './Filter/Beuty'
+import Clothes from './Filter/Clothes'
+import Stationery from './Filter/stationery'
 
 
 export default function App() {
-  const [data, setData] = useState(
-    [
-      { id: 1, name: "bhakti", subject: "react"},
-      { id: 2, name: "KMB", subject: "nodejs"},
-    ]
-  )
   return (
+    
     <div>
       <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Home data={data}/>}></Route>
-        <Route path='/create' element={<Create data={data} setData={setData}/>}></Route>
-        <Route path='/delete' element={<Delete data={data} setData={setData}/>}></Route>
-        <Route path='/update' element={<Update data={data} setData={setData}/>}></Route>
+        <Routes>
+          <Route path='/' element={<Home/>}></Route>
+          <Route path='/food' element={<Food/>}></Route>
+          <Route path='/electronic' element={<Electronic/>}></Route>
+          <Route path='/beuty' element={<Beuty/>}></Route>
+          <Route path='/clothes' element={<Clothes/>}></Route>
+          <Route path='/stationery' element={<Stationery/>}></Route>
         </Routes>
-        </BrowserRouter>
-      </div>
+      </BrowserRouter>
+
+      
+
+    </div>
   )
 }
