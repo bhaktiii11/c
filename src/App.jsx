@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import { Provider } from 'react-redux'
-// import ReduxCounter from './Redux Crud/ReduxCounter'
-import { store } from './app/store'; 
-import ReduxCounter from './Redux/ReduxCounter';
+import { store } from './App/Store'
+import Taskm from './Redux/Taskm'
 
 
 export default function App() {
   return (
     <div>
-      <Provider store={store} >
-        <ReduxCounter/>
-      </Provider>
+   
+    <Provider store={store}>
+      <Taskm/>
+    </Provider>
     </div>
   )
 }
