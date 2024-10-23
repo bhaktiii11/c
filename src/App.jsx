@@ -1,10 +1,15 @@
 import React from 'react'
-import ApiwithAxios from './Components/ApiwithAxios'
+import { Provider } from 'react-redux';
+import { store } from './app/Store';
+import ReduxApi from './Redux/ReduxApi';
 
 export default function App() {
+
   return (
     <div>
-      <ApiwithAxios/>
-      </div>
+      <Provider store={store} >
+        <ReduxApi/>
+      </Provider>
+    </div>
   )
 }
