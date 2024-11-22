@@ -1,19 +1,17 @@
 import React from 'react'
-import {BrowserRouter,Routes,Route} from 'react-router-dom'
-import Signup from './Components/Signup'
-import Signin from './Components/Signin'
-import Home from './Components/Home'
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Login from './Components/Login'
+import DashBord from './Components/DashBord'
+
 
 export default function App() {
   return (
-    <div>
-      <BrowserRouter>
-          <Routes>
-              <Route path='/' Component={Signup}></Route>
-              <Route path='/SignIn' Component={Signin}></Route>
-              <Route path='/Home' Component={Home}></Route>
-          </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Routes>
+          <Route path='/' Component={Login}></Route>
+          <Route path='/DashBord' Component={DashBord}></Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
