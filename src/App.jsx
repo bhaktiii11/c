@@ -1,17 +1,15 @@
 import React from 'react'
-
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Login from './Components/Login'
-import DashBord from './Components/DashBord'
-
+import { Provider } from 'react-redux';
+import { store } from './app/Store';
+import ReduxApi from './Redux/ReduxApi';
 
 export default function App() {
+
   return (
-    <BrowserRouter>
-      <Routes>
-          <Route path='/' Component={Login}></Route>
-          <Route path='/DashBord' Component={DashBord}></Route>
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <Provider store={store} >
+        <ReduxApi/>
+      </Provider>
+    </div>
   )
 }
