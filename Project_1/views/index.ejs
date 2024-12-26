@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img{ 
+            height: 200px;
+        }
+        .book-container{
+            border: 2px solid;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .book{
+            width: 18%;
+            /* border: 1px solid; */
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <h1>Welcome to ExpressJs</h1>
+
+    <form action="/addData" method="post">
+        <input type="text" placeholder="Enter your name" name="name" />
+        <input type="text" placeholder="Enter your subject" name="subject" />
+        <input type="text" placeholder="Enter your city" name="city" />
+        <button type="submit">Add Data</button>
+    </form>
+    
+    
+<div class="book-container">
+
+    <%books.map((e,i)=> {%>
+
+        <div class="book">
+           <img src="<%= e.image %>" alt="">
+
+           <div class="content">
+
+               <h1> Book No: <%= e.id %> </h1>
+               <h2> <%= e.name %> </h2>
+               <h3> <%= e.author %> </h3>
+               <p><%= e.price %> </p>
+               <h4><%= e.releasedDate %> </h4>
+               
+
+               <div class="action">
+                <button><a href="/editData/<%=e.id%>"><i class="fa-regular fa-pen-to-square"></i>Edit</a></button>
+                <button><a href="/deleteData?id=<%=e.id%>"><i class="fa-solid fa-trash-arrow-up"></i>Delete</a></button>
+               </div>
+
+            </div>
+        <!-- <tr>
+            <td><%=e.id%></td>
+            <td><%=e.name%></td>
+            <td><%=e.subject%></td>
+           
+            <td>
+                <button><a href="/editData/<%=e.id%>">Edit</a></button>
+            </td>
+            <td>
+                <button><a href="/deleteData?id=<%=e.id%>">Delete</a></button>
+            </td>
+        </tr> -->
+        </div>
+
+    <%})%> 
+        
+</div> 
+
+</body>
+</html>

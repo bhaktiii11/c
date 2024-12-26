@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+
+<body class="edit">
+      
+    <form action="/updateData" method="post" class="form-container">
+        <h2 class="edit-heading">EDIT DATA AS PER YOUR NEED...</h2>
+        <input hidden type="text" placeholder="Id" value="<%=singleData.id%>" name="id" >
+        <input type="text" placeholder="Enter Name : " value="<%=singleData.name%>" name="name">
+        <input type="text" placeholder="Enter author name : " value="<%=singleData.author%>" name="author">
+        <input type="text" placeholder="Enter price : " value="<%=singleData.price%>" name="price">
+        <input type="date" placeholder="Enter data : " value="<%=singleData.releasedDate%>" name="releasedDate">
+        <button type="submit" class="submit-btn">Submit</button>
+        <input
+            type="text"
+            value="<%=singleData.name%>"
+            placeholder="Enter your name"
+            name="name"
+            />
+        <input
+            type="text"
+            value="<%=singleData.subject%>"
+            placeholder="Enter your subject"    
+            name="subject" 
+            />
+        <input
+            type="text"
+            value="<%=singleData.city%>"
+            placeholder="Enter your city"   
+            name ="city" 
+            />
+
+        <button type="submit">submit</button>
+        
+    </form>
+</body>
+</html>
