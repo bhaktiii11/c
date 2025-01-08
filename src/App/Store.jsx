@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import  todo  from "../feature/TodoSlice";
+import  Api  from "../Feature/Slice";
 
 
-export const store = configureStore({
-    reducer:{
-        todoKey : todo
+export const Store = configureStore({
+    reducer : {
+        apiKey: Api
     }
 })
